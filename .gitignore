@@ -209,5 +209,7 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# gorilla repo for BFCL
+**/gorilla/
 # MLflow database
 mlflow.db
