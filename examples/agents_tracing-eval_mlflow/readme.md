@@ -71,8 +71,10 @@ Both agents were enhanced with:
    - `log_monitor/log_monitor_agent.ipynb` - Event-driven agent
 
 5. **View traces in MLflow UI**
+   
+   Run `mlflow ui` from the respective example folder you're working in:
    ```bash
-   # path : /examples/agents_tracing-eval_mlflow
+   cd nps_agent/
    mlflow ui --port 5001
    ```
 
