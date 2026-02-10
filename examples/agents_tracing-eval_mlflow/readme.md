@@ -41,10 +41,20 @@ Both agents were enhanced with:
 
 1. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   # path : /examples/agents_tracing-eval_mlflow
+   uv venv --python 3.12
+   source .venv/bin/activate
+   uv pip install -r requirements.txt
    ```
 
 2. **Start Llama Stack server** on port 8321
+   ```
+   ## TODO : Provide working setup 
+   ##Currently working :
+   uv run --with llama-stack llama stack list-deps starter | xargs -L1 uv pip install
+   # yaml file needs to be update ...
+   uv run --with llama-stack llama stack run ../ls-working.yaml
+   ```
 
 3. **Set environment variables**
    
@@ -62,6 +72,7 @@ Both agents were enhanced with:
 
 5. **View traces in MLflow UI**
    ```bash
+   # path : /examples/agents_tracing-eval_mlflow
    mlflow ui --port 5001
    ```
 
