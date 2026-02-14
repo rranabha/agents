@@ -34,7 +34,10 @@ for tool in tools:
 # Cell 3: Build the LangGraph ReAct Agent
 llm = ChatOpenAI(
     model="gpt-4o",
-    use_responses_api=True,
+    # NOTE: Logically setting True or False should produce same behaviour.
+    # Because we aren't binding any `mcp` server as the tool. But only providing client side python functions as tools.
+    # However, only when we set this to False, we get correct ordering in MLFLOW UI
+    use_responses_api=True, 
     )
 
 # Bind tools to LLM
